@@ -8,10 +8,10 @@
 
 /* === css variables === */
 :root {
-    --header-bg-color: #36ac1f;
+    --header-bg-color: #35618d;
     --textarea-bg-color: rgb(250, 246, 246);
-    --body-bg-color: rgb(154, 185, 154);
-    --nav-link-color: #bbb;
+    --body-bg-color: rgba(169, 186, 223, 0.945);
+    --nav-link-color: #cccccc;
 }
 
 /* === body style === */
