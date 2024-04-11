@@ -1,0 +1,19 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+  <h1>Resultados del análisis</h1>
+  <h2>Texto analizado:</h2>
+  <p>{{ content }}</p>
+  <h2>Texto limpiado:</h2>
+  <p>{{ cleaned_text }}</p>
+  <h2>Cantidad de palabras:</h2>
+  <p>{{ words_count }}</p>
+  <h2>Cantidad de caracteres:</h2>
+  <p>{{ characters_count }}</p>
+  <h2>Palabras más frecuentes:</h2>
+  <ul>
+    {% for word, frequency in frequent_words %}
+    <li>{{ word }}: {{ frequency }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

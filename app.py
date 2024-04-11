@@ -217,8 +217,13 @@ def post():
          return render_template('post.html', name = name, title = name)
     if request.method =='POST':
         content = request.form['content']
-        print(content)
-        return redirect(url_for('result'))
+        cleaned_text = cleaning_text(content)
+        words_count = counting_words_regex(content)
+        characters_count = counting_characters(content)
+        frequent_words = more_frequent_words(content)
+        return render_template('result.html', content=content, cleaned_text=cleaned_text, words_count=words_count, characters_count=characters_count, frequent_words=frequent_words)
+
+
 
 if __name__ == '__main__':
     # for deployment
@@ -283,4 +288,8 @@ for palabra, frecuencia in resultado:
 
 
 
+    '''
+    
+    '''
+    quiero construir una app simple para analizar textos. debo desarrollarla con python, flask, javaScript, desplegada en render.com y estos son los archivos que tengo hasta el momento pero la app no devuelve el texto con sus correcciones. que es lo que sucede:
     '''
