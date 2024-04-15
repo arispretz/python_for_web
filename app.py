@@ -204,7 +204,7 @@ def home ():
 @app.route('/about')
 def about():
     name = '30 Days Of Python Programming'
-    return render_template('about.html', name = name, title = 'About Us')
+    return render_template('about.html', name = name, title = 'About')
 
 @app.route('/result')
 def result():
